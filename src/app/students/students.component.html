@@ -9,40 +9,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
+            <tr *ngFor="let student of students">
+                <th scope="row">{{ student.cedula }}</th>
+                <td>{{ student.nombres }}</td>
+                <td>{{ student.apellidos }}</td>
                 <td width="10px">
-                    <a href="#" class="btn btn-sm btn-success">Ver</a>
-                </td>
-                <td width="10px">
-                    <a href="#" class="btn btn-sm btn-primary">Editar</a>
-                </td>
-                <td>
-                    <a href="#" class="btn btn-sm btn-danger">Eliminar</a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td width="10px">
-                    <a href="#" class="btn btn-sm btn-success">Ver</a>
-                </td>
-                <td width="10px">
-                    <a href="#" class="btn btn-sm btn-primary">Editar</a>
-                </td>
-                <td>
-                    <a href="#" class="btn btn-sm btn-danger">Eliminar</a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td width="10px">
-                    <a href="#" class="btn btn-sm btn-success">Ver</a>
+                    <button class="btn btn-sm btn-success" (click)="getById(student.id)">Ver</button>
                 </td>
                 <td width="10px">
                     <a href="#" class="btn btn-sm btn-primary">Editar</a>
