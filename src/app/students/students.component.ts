@@ -16,12 +16,20 @@ export class StudentsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.getAllStudent();
+  }
+
+  getAllStudent() {
     this.studentService.getAllStudents().subscribe((data: Student[]) => {
       this.students = data['Student'];
     })
   }
 
-  getById(id:number) {
+  deleteStudent(id:number) {
     console.log(id);
+    this.studentService.deleteStudent(id).subscribe(data => {
+      console.log(data);
+      this.getAllStudent();
+    });
   }
 }

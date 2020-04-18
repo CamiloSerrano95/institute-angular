@@ -1,4 +1,6 @@
 <div class="mt-4">
+    <a routerLink="/student/create" class="btn btn-sm btn-success">Crear Estudiante</a>
+
     <table class="table">
         <thead class="thead-dark">
             <tr>
@@ -14,13 +16,13 @@
                 <td>{{ student.nombres }}</td>
                 <td>{{ student.apellidos }}</td>
                 <td width="10px">
-                    <button class="btn btn-sm btn-success" (click)="getById(student.id)">Ver</button>
+                    <a [routerLink]="['/student/', student.id]" class="btn btn-sm btn-success">Ver</a>
                 </td>
                 <td width="10px">
                     <a href="#" class="btn btn-sm btn-primary">Editar</a>
                 </td>
                 <td>
-                    <a href="#" class="btn btn-sm btn-danger">Eliminar</a>
+                    <button class="btn btn-sm btn-danger" (click)="deleteStudent(student.id)">Eliminar</button>
                 </td>
             </tr>
         </tbody>
