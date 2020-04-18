@@ -1,35 +1,56 @@
-<form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
-    <div class="row">
-        <div class="col-xs-12">
-            <button type="submit" class="btn btn-success" [disabled]="!studentForm.valid">Save</button>
-            <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="form-group">
-                <label for="name">Nombres</label>
-                <input type="text" id="nombres" class="form-control" formControlName="nombres">
+<div class="card mt-5 container" style="width: 19rem;">
+    <div class="card-body text-center ">
+      <h5 class="card-title">Save Student</h5>
+      <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label for="name">Name</label>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fas fa-user-circle" style="color: Dodgerblue;"></i></div>
+                    </div>
+                    <input type="text" id="nombres" class="form-control" formControlName="nombres">
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="form-group">
-                <label for="name">Apellidos</label>
-                <input type="text" id="apellidos" class="form-control" formControlName="apellidos">
+    
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label for="name">Last Name</label>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fas fa-user-circle" style="color: Dodgerblue;"></i></div>
+                    </div>
+                    <input type="text" id="apellidos" class="form-control" formControlName="apellidos">
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="form-group">
-                <label for="name">Cedula</label>
-                <input type="text" id="cedula" class="form-control" formControlName="cedula">
+    
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label for="name">Nit</label>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fas fa-address-card" style="color: Dodgerblue;"></i></div>
+                    </div>
+                    <input type="text" id="cedula" class="form-control" formControlName="cedula">
+                </div>
             </div>
         </div>
+
+        <div class="card-footer text-muted justify-content-center">
+            <h6 class="card-subtitle mb-2 text-center text-muted">options</h6>
+            <div class="row mt-1">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-success" [disabled]="!studentForm.valid">
+                        <i class="fas fa-check-circle"></i> Save
+                    </button>
+                    <button type="button" class="btn btn-danger ml-1" (click)="onCancel()">
+                        <i class="fas fa-times-circle"></i> Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
     </div>
-</form>
+  </div>

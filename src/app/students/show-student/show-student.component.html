@@ -1,5 +1,22 @@
-<h1>Nombres: {{ student.nombres }}</h1>
-<h1>Apellidos: {{ student.apellidos }}</h1>
-<h1>Cedula: {{ student.cedula }}</h1>
-
-<a routerLink="/students" class="btn btn-sm btn-danger">Inicio</a>
+<div class="container mt-5 card text-center" style="width: 35rem;">
+    <div class="card-header">
+        <span style="font-size: 3em; ">
+            <i class="fas fa-user"></i> Estudent
+        </span>
+    </div>
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+            <p>Name: {{ student.nombres }}</p>
+            <p>Last Name: {{ student.apellidos }}<p>
+            <p>Nit: {{ student.cedula }}</p>
+        </blockquote>
+    </div>
+    <div class="card-footer">
+        <h4 class="card-subtitle mb-2 text-center">Options</h4>
+        <div class="row">
+            <div class="col-md-12 mt-1">
+                <a routerLink="/students" class="btn btn-sm btn-danger">Inicio</a>
+            </div>
+        </div>
+    </div>
+</div>
