@@ -16,5 +16,19 @@ export class StudentsService {
     return this.http.get<Student[]>(url);
   }
 
+  getStudentById(id:string) {
+    const url = `http://localhost:3000/student/${id}`;
+    return this.http.get<Student[]>(url);
+  }
+
+  newStudent(data: Student[]) {
+    const url = `http://localhost:3000/student`;
+    return this.http.post(url, data);
+  }
+
+  deleteStudent(id:number) {
+    const url = `http://localhost:3000/student/${id}`;
+    return this.http.delete(url);
+  }
 
 }
