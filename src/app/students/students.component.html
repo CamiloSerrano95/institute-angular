@@ -17,7 +17,7 @@
                     <td>{{ student.nombres }}</td>
                     <td>{{ student.apellidos }}</td>
                     <td width="10px">
-                        <a [routerLink]="['/student/', student.id_student]" class="btn btn-sm btn-link">
+                        <a [routerLink]="['/student/', student.id]" class="btn btn-sm btn-link">
                             <span style="font-size: 1em; color: limegreen;">
                                 <i class="far fa-eye"></i>
                             </span>
@@ -31,7 +31,7 @@
                         </a>
                     </td>
                     <td width="10px">
-                        <button class="btn btn-sm btn-link" (click)="deleteStudent(student.id_student)">
+                        <button class="btn btn-sm btn-link" (click)="deleteStudent(student.id)">
                             <span style="font-size: 1em; color: tomato;">
                                 <i class="fas fa-trash"></i>
                             </span>
