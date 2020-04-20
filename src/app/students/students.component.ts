@@ -15,7 +15,7 @@ export class StudentsComponent implements OnInit {
     private studentService: StudentsService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.getAllStudent();
   }
 
@@ -26,9 +26,7 @@ export class StudentsComponent implements OnInit {
   }
 
   deleteStudent(id:number) {
-    console.log(id);
     this.studentService.deleteStudent(id).subscribe(data => {
-      console.log(data);
       this.getAllStudent();
     });
   }
