@@ -24,7 +24,7 @@
                         </a>
                     </td>
                     <td width="10px">
-                        <a href="#" class="btn btn-sm btn-link">
+                        <a [routerLink]="['/student/create']" [queryParams]="{ id: student.id}" class="btn btn-sm btn-link">
                             <span style="font-size: 1em; color: dodgerblue;">
                                 <i class="fas fa-user-edit"></i>
                             </span>
