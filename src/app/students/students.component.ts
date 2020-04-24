@@ -9,7 +9,7 @@ import { Student } from './student.model';
 })
 export class StudentsComponent implements OnInit {
 
-  students: Student[] = [];
+  students: Student[];
 
   constructor(
     private studentService: StudentsService
@@ -20,7 +20,7 @@ export class StudentsComponent implements OnInit {
   }
 
   getAllStudent() {
-    this.studentService.getAllStudents().subscribe((data: Student[]) => {
+    this.studentService.getAllStudents().subscribe(data => {
       this.students = data['Student'];
     })
   }
